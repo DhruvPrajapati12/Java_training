@@ -13,19 +13,11 @@ interface Transport
 
 abstract class Animal
 {
-
-	protected abstract void deliver();
 	
 }
 
 class Tiger extends Animal
 {
-
-	@Override
-	protected void deliver() {
-		// TODO Auto-generated method stub
-		
-	}
 	
 }
 
@@ -43,12 +35,6 @@ class Camel extends Animal implements Transport
 class Deer extends Animal
 {
 
-	@Override
-	protected void deliver() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 }
 
 class Donkey extends Animal implements Transport
@@ -64,18 +50,66 @@ class Donkey extends Animal implements Transport
 
 public class Code4 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
-		Animal obj[] = new Animal[4];
-		obj[0] = new Tiger();
-		obj[1] = new Camel();
-		obj[2] = new Deer();
-		obj[3] = new Donkey();
+		Animal arr[] = new Animal[4];
+		arr[0] = new Tiger();
+		arr[1] = new Camel();
+		arr[2] = new Deer();
+		arr[3] = new Donkey();
 		
-		obj[0].deliver();
-		obj[1].deliver();
-		obj[2].deliver();
-		obj[3].deliver();
+		
+		try
+		{
+			((Transport) arr[1]).deliver();
+		}
+		catch(Exception e)
+		{
+			System.out.println();
+		}
+		
+		try
+		{
+			((Transport) arr[3]).deliver();
+		}
+		catch(Exception e)
+		{
+			System.out.println();
+		}
+		
+		try
+		{
+			((Transport) arr[0]).deliver();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Tiger class is not implementing Transport interface, so it can't call deliver method");
+		}
+		
+		try
+		{
+			((Transport) arr[2]).deliver();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Deer class is not implementing Transport interface, so it can't call deliver method");
+		}
+		
+		
+//		try
+//		{
+//			((Transport) arr[1]).deliver();
+//			((Transport) arr[3]).deliver();
+//			
+//			((Transport) arr[0]).deliver();
+//			((Transport) arr[2]).deliver();
+//		}
+//		catch(Exception e)
+//		{
+//			System.out.println("Error");
+//		}
+		
+		
 	}
 
 }

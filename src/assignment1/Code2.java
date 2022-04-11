@@ -43,7 +43,7 @@ class Family implements Child
 	@Override
 	public void parent2() {
 		// TODO Auto-generated method stub
-		System.out.println("this is parent1 method");
+		System.out.println("this is parent2 method");
 	}
 
 	@Override

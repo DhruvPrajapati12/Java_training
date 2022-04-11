@@ -22,6 +22,8 @@ class Potato extends Vegetable
 {	
 	Potato(String arg) {
 		super(arg);
+		
+//		super();
 		// TODO Auto-generated constructor stub
 	}
 

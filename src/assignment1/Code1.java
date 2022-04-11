@@ -12,22 +12,34 @@ abstract class Engineering
 	abstract void display();
 }
 
-class Computer implements Programming
+class Computer extends Engineering implements Programming
 {
 	@Override
 	public void coding() {
 		// TODO Auto-generated method stub
 		System.out.println("This is coding method");
 	}
+
+	@Override
+	void display() {
+		// TODO Auto-generated method stub
+		System.out.println("I am abstract method, my body is given by Computer class");
+	}
 }
 
-class Mechanical implements Drawing
+class Mechanical extends Engineering implements Drawing
 {
 
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
 		System.out.println("This is drawing method");
+	}
+
+	@Override
+	void display() {
+		// TODO Auto-generated method stub
+		System.out.println("I am abstract method, my body is given by Mechanical class");
 	}
 	
 }
@@ -49,7 +61,10 @@ public class Code1 {
 		Mechanical m = new Mechanical();
 		
 		c.coding();
+		c.display();
+		
 		m.draw();
+		m.display();
 
 	}
 
