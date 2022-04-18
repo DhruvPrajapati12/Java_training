@@ -6,14 +6,14 @@ class MultithreadDemo1 extends Thread
 	{
 		for(int i=1; i<=3; i++)
 		{
-			System.out.println("Thread class: " + i);
-//				try {
-//					Thread.sleep(500);
-//				} catch (InterruptedException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		
+				System.out.println("Thread class: " + i);
 		}
 	}
 }

@@ -8,7 +8,7 @@ class Thread1 extends Thread
 		while(i<4)
 		{
 			System.out.println("I am thread1 first line");
-//			System.out.println("I am thread1 second line");
+			System.out.println("I am thread1 second line");
 			i++;
 		}
 	}
@@ -36,7 +36,7 @@ class Thread2 extends Thread
 		while(i<4)
 		{
 			System.out.println("I am thread2 first line");
-//			System.out.println("I am thread2 second line");
+			System.out.println("I am thread2 second line");
 			i++;
 		}
 	}
